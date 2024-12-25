@@ -1,4 +1,4 @@
-# README: Italian Crossword Clue Generator
+#Italian Crossword Clue Generator
 
 This project provides a Python script to generate Italian crossword clues using language models from Hugging Face. The script supports two models:
 
