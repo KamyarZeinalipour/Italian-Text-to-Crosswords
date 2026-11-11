@@ -1,6 +1,36 @@
 # Italian Crossword Clue Generator
 
-This project provides a Python script to generate Italian crossword clues using language models from Hugging Face. The script supports two models:
+[![Paper](https://img.shields.io/badge/CLiC--it_2024-paper-b31b1b)](https://arxiv.org/abs/2411.16936)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97_Dataset-Italian--Clue--Instruct-yellow)](https://huggingface.co/datasets/Kamyar-zeinalipour/ita_cw_text)
+[![Models](https://img.shields.io/badge/%F0%9F%A4%97_Collection-Italian_Crosswords-orange)](https://huggingface.co/collections/Kamyar-zeinalipour/italian-educational-crosswords-6af486926814a362675d7c9a)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE.txt)
+
+Generate Italian crossword clues from any Italian text. Given a passage, a keyword and a clue
+type, the models write a crossword clue for that keyword. This repository accompanies
+[*Harnessing LLMs for Educational Content-Driven Italian Crossword Generation*](https://arxiv.org/abs/2411.16936)
+(CLiC-it 2024); the same line of work also covers
+[CLiC-it 2023](https://arxiv.org/abs/2311.15723) and [IJCoL 2025](https://doi.org/10.17454/ijcol111.03).
+Everything is gathered in the [Italian Educational Crosswords collection](https://huggingface.co/collections/Kamyar-zeinalipour/italian-educational-crosswords-6af486926814a362675d7c9a).
+
+## Models and data
+
+| Resource | |
+|---|---|
+| [Llama3-8B-ITA-Text-to-Cross](https://huggingface.co/Kamyar-zeinalipour/Llama3-8B-ITA-Text-to-Cross) | Llama-3-8B-Instruct fine-tuned with LoRA |
+| [Mistral-7B-ITA-Text-to-Cross](https://huggingface.co/Kamyar-zeinalipour/Mistral-7B-ITA-Text-to-Cross) | Mistral-7B-Instruct-v0.3 fine-tuned with LoRA |
+| [ita_cw_text](https://huggingface.co/datasets/Kamyar-zeinalipour/ita_cw_text) | Italian-Clue-Instruct: 30k texts with keyword, clue and clue type |
+| [ITA_CW](https://huggingface.co/datasets/Kamyar-zeinalipour/ITA_CW) | 125,202 clue-answer pairs from published Italian puzzles |
+
+## Results
+
+ROUGE against GPT-4o reference clues, base → fine-tuned:
+
+| Model | ROUGE-1 | ROUGE-2 | ROUGE-L |
+|---|---|---|---|
+| Mistral-7B-Instruct-v0.3 | 0.342 → **0.611** | 0.176 → **0.458** | 0.261 → **0.556** |
+| Llama-3-8B-Instruct | 0.258 → **0.552** | 0.112 → **0.403** | 0.198 → **0.501** |
+
+The script supports two models:
 
 - **Llama3-8B-ITA-Text-to-Cross**: `Kamyar-zeinalipour/Llama3-8B-ITA-Text-to-Cross`
 - **Mistral-7B-ITA-Text-to-Cross**: `Kamyar-zeinalipour/Mistral-7B-ITA-Text-to-Cross`
@@ -218,3 +248,15 @@ This project is licensed under the [MIT License](LICENSE.txt).
 ---
 
 Happy puzzling!
+
+## Citation
+
+```bibtex
+@inproceedings{zeinalipour2024harnessing,
+  title     = {Harnessing LLMs for Educational Content-Driven Italian Crossword Generation},
+  author    = {Kamyar Zeinalipour and Achille Fusco and Asya Zanollo and Marco Maggini and Marco Gori},
+  booktitle = {Proceedings of the 10th Italian Conference on Computational Linguistics (CLiC-it 2024)},
+  year      = {2024},
+  url       = {https://aclanthology.org/2024.clicit-1.110/}
+}
+```
