@@ -1,0 +1,81 @@
+cff-version: 1.2.0
+message: "If you use this code or the Italian-Clue-Instruct data, please cite the paper below."
+title: "Italian Crossword Generator: An In-depth Linguistic Analysis in Educational Word Puzzles"
+repository-code: "https://github.com/KamyarZeinalipour/Italian-Text-to-Crosswords"
+license: MIT
+authors:
+  - family-names: "Zeinalipour"
+    given-names: "Kamyar"
+  - family-names: "Iaquinta"
+    given-names: "Tommaso"
+  - family-names: "Zanollo"
+    given-names: "Asya"
+  - family-names: "Angelini"
+    given-names: "Giovanni"
+  - family-names: "Rigutini"
+    given-names: "Leonardo"
+  - family-names: "Maggini"
+    given-names: "Marco"
+  - family-names: "Gori"
+    given-names: "Marco"
+preferred-citation:
+  type: article
+  title: "Italian Crossword Generator: An In-depth Linguistic Analysis in Educational Word Puzzles"
+  authors:
+    - family-names: "Zeinalipour"
+      given-names: "Kamyar"
+    - family-names: "Iaquinta"
+      given-names: "Tommaso"
+    - family-names: "Zanollo"
+      given-names: "Asya"
+    - family-names: "Angelini"
+      given-names: "Giovanni"
+    - family-names: "Rigutini"
+      given-names: "Leonardo"
+    - family-names: "Maggini"
+      given-names: "Marco"
+    - family-names: "Gori"
+      given-names: "Marco"
+  journal: "Italian Journal of Computational Linguistics (IJCoL)"
+  volume: 11
+  month: 8
+  year: 2025
+  doi: "10.17454/ijcol111.03"
+  url: "https://doi.org/10.17454/ijcol111.03"
+references:
+  - type: conference-paper
+    title: "Italian Crossword Generator: Enhancing Education through Interactive Word Puzzles"
+    authors:
+      - family-names: "Zeinalipour"
+        given-names: "Kamyar"
+      - family-names: "Iaquinta"
+        given-names: "Tommaso"
+      - family-names: "Zanollo"
+        given-names: "Asya"
+      - family-names: "Angelini"
+        given-names: "Giovanni"
+      - family-names: "Rigutini"
+        given-names: "Leonardo"
+      - family-names: "Maggini"
+        given-names: "Marco"
+      - family-names: "Gori"
+        given-names: "Marco"
+    collection-title: "Proceedings of the Ninth Italian Conference on Computational Linguistics (CLiC-it 2023), Venice, Italy"
+    year: 2023
+    url: "https://arxiv.org/abs/2311.15723"
+  - type: conference-paper
+    title: "Harnessing LLMs for Educational Content-Driven Italian Crossword Generation"
+    authors:
+      - family-names: "Zeinalipour"
+        given-names: "Kamyar"
+      - family-names: "Fusco"
+        given-names: "Achille"
+      - family-names: "Zanollo"
+        given-names: "Asya"
+      - family-names: "Maggini"
+        given-names: "Marco"
+      - family-names: "Gori"
+        given-names: "Marco"
+    collection-title: "Proceedings of the Tenth Italian Conference on Computational Linguistics (CLiC-it 2024), Pisa, Italy"
+    year: 2024
+    url: "https://aclanthology.org/2024.clicit-1.110/"
