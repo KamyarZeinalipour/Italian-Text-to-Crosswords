@@ -235,6 +235,39 @@ If you encounter any issues or have questions, feel free to reach out to the mai
 
 ---
 
+<!-- hf-usage -->
+## Load the models and data from Hugging Face
+
+Everything released with the paper is in the Hugging Face collection [Italian Educational Crosswords](https://huggingface.co/collections/Kamyar-zeinalipour/italian-educational-crosswords-6af486926814a362675d7c9a).
+
+```python
+from datasets import load_dataset
+
+data = load_dataset("Kamyar-zeinalipour/ita_cw_text")
+data = load_dataset("Kamyar-zeinalipour/ITA_CW")
+```
+
+The fine-tuned models are LoRA adapters. `AutoPeftModelForCausalLM` downloads the base model named in the adapter's configuration and applies the adapter on top of it:
+
+```python
+import torch
+from peft import AutoPeftModelForCausalLM
+from transformers import AutoTokenizer
+
+repo = "Kamyar-zeinalipour/Llama3-8B-ITA-Text-to-Cross"
+tokenizer = AutoTokenizer.from_pretrained("Kamyar-zeinalipour/Llama3-8B-ITA-Text-to-Cross")
+model = AutoPeftModelForCausalLM.from_pretrained(repo, torch_dtype=torch.bfloat16, device_map="auto")
+```
+
+| Adapter | Base model |
+|---|---|
+| [Llama3-8B-ITA-Text-to-Cross](https://huggingface.co/Kamyar-zeinalipour/Llama3-8B-ITA-Text-to-Cross) | [meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) |
+| [Mistral-7B-ITA-Text-to-Cross](https://huggingface.co/Kamyar-zeinalipour/Mistral-7B-ITA-Text-to-Cross) | [mistralai/Mistral-7B-Instruct-v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) |
+
+Some base models (Llama, Gemma, Mistral Small/Nemo) are gated: accept their licence on their Hugging Face page and log in with `huggingface-cli login` before loading.
+
+<!-- /hf-usage -->
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE.txt).
