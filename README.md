@@ -235,10 +235,11 @@ If you encounter any issues or have questions, feel free to reach out to the mai
 
 ---
 
+
 <!-- hf-usage -->
 ## Load the models and data from Hugging Face
 
-Everything released with the paper is in the Hugging Face collection [Italian Educational Crosswords](https://huggingface.co/collections/Kamyar-zeinalipour/italian-educational-crosswords-6af486926814a362675d7c9a).
+Each paper has its own Hugging Face collection: [Italian Crossword Generator (CLiC-it 2023)](https://huggingface.co/collections/Kamyar-zeinalipour/italian-crossword-generator-clic-it-2023-6afe1e94378c170314bf92da), [Italian Crossword Generation from Text (CLiC-it 2024)](https://huggingface.co/collections/Kamyar-zeinalipour/italian-crossword-generation-from-text-clic-it-2024-6af486926814a362675d7c9a).
 
 ```python
 from datasets import load_dataset
